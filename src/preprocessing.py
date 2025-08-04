@@ -42,6 +42,6 @@ def load_and_process_data(input_path, output_path):
 
 # The file can be run as a standalone
 if __name__ == "__main__":
-    input_csv = "data/NEV_fault_dataset new (3).csv"
+    input_csv = "data/NEV_fault_dataset.csv"
     output_csv = "data/processed_data.csv"
     load_and_process_data(input_csv, output_csv)
