@@ -55,7 +55,7 @@ Key insights from SHAP analysis:
 ## ⚙️ Installation & Setup
 
 # 1. Clone the repository
-git clone https://github.com/yourusername/EV_Fault_Detection.git
+git clone https://github.com/YuvalGoldman/EV_Fault_Detection.git
 cd EV_Fault_Detection
 
 # 2. Install required packages
@@ -70,7 +70,6 @@ python main.py
 ---
 
 ## 📎 Streamlit Dashboard
-
 
 streamlit run app.py
 
@@ -93,7 +92,9 @@ EV_Fault_Detection/
 ## 👨‍💻 Author
 Yuval Goldman
 Data Scientist | Biologist | Agronomist
-🔗 LinkedIn • GitHub: @YuvalGoldman
+
+🔗 LinkedIn: https://www.linkedin.com/in/yuval-goldman-1a6920204/
+    GitHub: @YuvalGoldman
 
 ## 📌 License
 This project is for educational and professional portfolio purposes. Please contact the author for reuse permissions.
