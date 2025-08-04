@@ -1,11 +1,20 @@
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-xgboost
-shap
-streamlit
-joblib
-jupyter
-ipykernel
+# Core packages
+pandas==2.2.2
+numpy==1.26.4
+
+# Visualization
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Machine Learning
+scikit-learn==1.5.0
+xgboost==2.0.3
+
+# Explainable AI (SHAP)
+shap==0.44.1
+
+# Streamlit App (optional dashboard)
+streamlit==1.35.0
+
+# Save & load models
+joblib==1.4.2
