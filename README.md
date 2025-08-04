@@ -58,7 +58,7 @@ cd EV_Fault_Detection
 pip install -r requirements.txt
 
 # 3. Place the raw data file in the 'data' folder:
-#    data/NEV_fault_dataset new (3).csv
+data/NEV_fault_dataset new (3).csv
 
 # 4. Run the full pipeline
 python main.py
