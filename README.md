@@ -27,13 +27,9 @@ This project predicts the **fault level (0–3)** of an EV system based on struc
 | XGBoost            | 0.93     | 0.93      | 0.93   | 0.93     |
 | PCA + XGBoost      | 0.89     | 0.89      | 0.89   | 0.89     |
 
-📊 **Visual Comparison**: See `plots/model_comparison.png` for a graphical view of performance.
-
 ---
 
 ## 🔍 SHAP Explainability
-
-![SHAP Summary Plot](plots/xgb_shap_summary.png)
 
 Key insights from SHAP analysis:
 - `Voltage_diff`, `Current_avg`, and `Temperature_delta` are among the most impactful features.
