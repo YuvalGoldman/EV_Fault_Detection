@@ -22,7 +22,7 @@ def load_and_process_data(input_path, output_path):
 
     df_split = df_raw.copy()
 
-    # הפוך את הכל ל־float, שגיאות -> NaN
+    # Convert everything to float, errors -> NaN
     df_split = df_split.apply(pd.to_numeric, errors='coerce')
 
     # Convert everything to float, errors -> NaN
