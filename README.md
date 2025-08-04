@@ -1,57 +1,99 @@
 # 🔧 EV Fault Detection Using Machine Learning
 
-A full Data Science project for detecting fault levels in electric vehicles using multivariate sensor data, machine learning, and explainable AI (XAI).
+A full-stack Data Science project for classifying electric vehicle (EV) fault levels using multivariate sensor readings. The pipeline covers end-to-end processing: from raw data parsing to model training, explainable AI, and live predictions via a Streamlit dashboard.
+
+---
 
 ## 📊 Project Overview
-This pipeline classifies the **Fault Level** of an electric vehicle based on vector-like sensor readings separated by periods.
 
-The project includes:
-- Data cleaning and extrapolation
-- Feature engineering (diffs, deltas, averages)
-- PCA & SVD for dimensionality analysis
-- Classification models: Random Forest, XGBoost
-- SHAP explainability
-- Streamlit dashboard for live predictions
+This project predicts the **fault level (0–3)** of an EV system based on structured sensor inputs represented as compound vectors.
 
----
-
-## 🧪 Models & Results
-
-| Model            | Accuracy | Precision | Recall | F1 Score |
-|------------------|----------|-----------|--------|----------|
-| Random Forest    | 0.91     | 0.91      | 0.91   | 0.91     |
-| XGBoost          | 0.93     | 0.93      | 0.93   | 0.93     |
-| PCA + XGBoost    | 0.89     | 0.89      | 0.89   | 0.89     |
-
-> Full visual comparison in [`plots/model_comparison.png`](plots/model_comparison.png)
+### ✅ Key Capabilities
+- 🧹 **Data Cleaning** – parsing custom vector format, handling missing values
+- 🧠 **Feature Engineering** – generating statistical features like deltas, averages, and differences
+- 🔬 **Dimensionality Reduction** – using PCA & SVD for analysis and model comparison
+- 🤖 **Model Training** – classification using Random Forest and XGBoost
+- 🔍 **Explainability** – interpreting model behavior using SHAP
+- 📈 **Evaluation** – comparison across models and feature sets
+- 🧩 **Streamlit App** – interactive dashboard for live predictions (optional)
 
 ---
 
-## 🧠 SHAP Explainability
+## 🧪 Model Performance Summary
 
-![SHAP summary](plots/xgb_shap_summary.png)
+| Model              | Accuracy | Precision | Recall | F1 Score |
+|-------------------|----------|-----------|--------|----------|
+| Random Forest      | 0.91     | 0.91      | 0.91   | 0.91     |
+| XGBoost            | 0.93     | 0.93      | 0.93   | 0.93     |
+| PCA + XGBoost      | 0.89     | 0.89      | 0.89   | 0.89     |
 
-> SHAP reveals that **Voltage_diff**, **Current_avg**, and **Temperature_delta** are highly influential.
+📊 **Visual Comparison**: See `plots/model_comparison.png` for a graphical view of performance.
 
 ---
 
-## 🛠️ Tech Stack
-- Python 3.10+
-- pandas, scikit-learn, matplotlib, seaborn
-- XGBoost
-- SHAP
-- Streamlit
-  
+## 🔍 SHAP Explainability
+
+![SHAP Summary Plot](plots/xgb_shap_summary.png)
+
+Key insights from SHAP analysis:
+- `Voltage_diff`, `Current_avg`, and `Temperature_delta` are among the most impactful features.
+- Helps interpret model predictions for each fault level class.
+
 ---
 
-## 📦 Installation
+## 🛠 Tech Stack
+
+- **Language**: Python 3.10+
+- **Data Processing**: `pandas`, `numpy`
+- **Modeling**: `scikit-learn`, `XGBoost`
+- **Visualization**: `matplotlib`, `seaborn`
+- **Explainability**: `SHAP`
+- **Deployment**: `Streamlit` (optional dashboard)
+
+---
+
+## ⚙️ Installation & Setup
+
+# 1. Clone the repository
+git clone https://github.com/yourusername/EV_Fault_Detection.git
+cd EV_Fault_Detection
+
+# 2. Install required packages
 pip install -r requirements.txt
+
+# 3. Place the raw data file in the 'data' folder:
+#    data/NEV_fault_dataset new (3).csv
+
+# 4. Run the full pipeline
+python main.py
 
 ---
 
 ## 📎 Streamlit Dashboard
 
-```bash
+
 streamlit run app.py
 
+## 📁 Repository Structure
 
+EV_Fault_Detection/
+│
+├── data/                  # Input & output CSVs
+├── models/                # Trained model files
+├── plots/                 # Evaluation & SHAP graphs
+├── src/                   # Core pipeline modules
+│   ├── preprocessing.py
+│   ├── feature_engineering.py
+│   ├── modeling.py
+│   └── explainability.py
+├── app.py                 # Streamlit dashboard (optional)
+├── main.py                # Pipeline orchestrator
+└── requirements.txt       # Project dependencies
+
+## 👨‍💻 Author
+Yuval Goldman
+Data Scientist | Biologist | Agronomist
+🔗 LinkedIn • GitHub: @YuvalGoldman
+
+## 📌 License
+This project is for educational and professional portfolio purposes. Please contact the author for reuse permissions.
