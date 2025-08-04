@@ -35,7 +35,23 @@ The project includes:
 
 ---
 
+## 🛠️ Tech Stack
+- Python 3.10+
+- pandas, scikit-learn, matplotlib, seaborn
+- XGBoost
+- SHAP
+- Streamlit
+  
+---
+
+## 📦 Installation
+pip install -r requirements.txt
+
+---
+
 ## 📎 Streamlit Dashboard
 
 ```bash
 streamlit run app.py
+
+
